@@ -1,0 +1,110 @@
+# pedagiojava
+pedagio wem  java
+import java.util.Scanner;
+class Main{
+public static void main (String[]args){
+  
+  double carroPequeno=5.00;
+  double carroMedio=10.00;
+  double carroGrande=15.00;
+  double Van=20.00;
+  double Caminhão=20.00;
+  double Onibus=20.00;
+  double Bicicleta,Moto = 00.00;
+ 
+  
+double caixa=0.00;
+double valorColetado1 = 0;
+double valorColetado2 = 0;
+double valorColetado3 = 0;
+double valorColetado4 = 0;
+double total = 0;
+  
+  
+  String fechar= "não";
+  String aceite= "sim";
+  
+    int tipocar;
+    int qntd1 = 0;
+    int qntd2 = 0;
+    int qntd3 = 0;
+    int qntd4 = 0;
+    int qntd5 = 0;  
+    int qntd6 = 0;
+
+  
+  Scanner scan = new Scanner(System.in);
+  do{
+   System.out.println("Você está no pedágio, seja bem vindo!"); 
+  System.out.println("Qual seria o seu veiculo?\n1-Carro Pequeno\n2-Carro Médio\n3-Carro grande\n4-Van\n5-Caminhão\n6-Bicicleta,Moto");
+  
+  tipocar=scan.nextInt();
+switch(tipocar){
+
+  case 1:
+    System.out.println ("Carros de porte pequeno é cobrado uma taxa de R$5.OO deseja seguir?");
+    aceite=scan.next();
+    if(aceite.equalsIgnoreCase("sim")){
+    qntd1 = qntd1+1;
+      
+   System.out.println("Isso aí, você está liberado. Boa viagem!");
+      
+      System.out.println("caixa");
+    }
+    break;
+
+case 2:   
+    System.out.println ("Carros de porte médio é cobrado uma taxa de R$10.OO deseja seguir?");
+    aceite=scan.next();
+    if(aceite.equalsIgnoreCase("sim")){
+
+      qntd2=qntd2+1;
+      
+      System.out.println("Isso aí, você está liberado. Boa viagem!");
+    }
+      break;
+    
+ case 3:
+    System.out.println ("Carros de porte grande é cobrado uma taxa de R$15.OO deseja seguir?");
+    aceite=scan.next();
+    if(aceite.equalsIgnoreCase("sim")){
+      qntd3=qntd3+1;
+     System.out.println("Isso aí, você está liberado. Boa viagem!");
+    }
+
+    break;
+
+  case 4:
+      System.out.println("Van, Caminhao, onibus pagam uma taxa de R$10,00. Deseja seguir?");    
+    aceite=scan.next();
+    if(aceite.equalsIgnoreCase("sim")){
+      qntd4=qntd4+1;
+     System.out.println("Isso aí, você está liberado. Boa viagem!");
+    }
+break;
+     case 5:
+      System.out.println("Bicicletas e motos não é cobrado nenhuma taxa. Deseja seguir?");    
+    aceite=scan.next();
+    if(aceite.equalsIgnoreCase("sim")){
+      qntd5=qntd5+1;
+     System.out.println("Isso aí, você está liberado. Boa viagem!");
+    }
+
+break;
+}
+ valorColetado1=qntd1*carroPequeno;
+valorColetado2 = qntd2*carroMedio;
+ valorColetado3 =qntd3*carroGrande;
+ valorColetado4 = qntd4*Onibus;
+
+total =(valorColetado1 + valorColetado2+ valorColetado3+valorColetado4);
+    
+ qntd6 = qntd1+qntd2+qntd3+qntd4+qntd5;
+  System.out.println("Gostaria de parar?");
+  fechar=scan.next();
+
+}while(fechar.equalsIgnoreCase("N"));
+    System.out.println("quantidade de veiculos: "+qntd6+"\nValor arrecadado:"+total);
+
+     }
+  }
